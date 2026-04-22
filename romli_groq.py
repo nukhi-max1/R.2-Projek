@@ -19,11 +19,28 @@ kunci_rahasia = st.secrets["GROQ_API_KEY"]
 client = Groq(api_key=kunci_rahasia)
 
 st.set_page_config(
+    
     page_title="ROMLI // LUNAR_PHASE",
     page_icon="🌙",
     layout="wide",
-    initial_sidebar_state="expanded"
+    initial_sidebar_state="auto"
 )
+
+st.markdown("""
+<style>
+    /* Jiwa Hape (Deteksi layar di bawah 768 pixel) */
+    @media (max-width: 768px) {
+        /* Ngecilin ukuran huruf di kolom chat biar pas */
+        .stTextInput>div>div>input {
+            font-size: 14px; 
+        }
+        /* Bikin tombol melebar penuhin layar hape */
+        .stButton>button {
+            width: 100%; 
+        }
+    }
+</style>
+""", unsafe_allow_html=True)
 
 # --- 2. JURUS CSS LUNAR (FIXED & CLEAN) ---
 st.markdown("""
