@@ -1,0 +1,6 @@
+streamlit
+groq
+duckduckgo-search
+yfinance
+SpeechRecognition
+streamlit-mic-recorder
